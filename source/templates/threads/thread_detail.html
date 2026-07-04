@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}{{ thread.title }} — Forum{% endblock %}
+
+{% block content %}
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+                <h3 class="mb-0">{{ thread.title }}</h3>
+                <small class="text-muted">
+                    {{ thread.created_at|date:"d.m.Y H:i" }} —
+                    <a href="#">{{ thread.author.username }}</a>
+                </small>
+            </div>
+            {% if user == thread.author or user.is_moderator %}
+                <div>
+                    <a href="#" class="btn btn-sm btn-outline-secondary">Редактировать</a>
+                    <a href="#" class="btn btn-sm btn-outline-danger">Удалить</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="card-body">
+            <p class="card-text" style="white-space: pre-wrap;">{{ thread.content }}</p>
+        </div>
+    </div>
+
+    {% if user.is_authenticated %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <button type="submit" class="btn btn-primary btn-sm">Ответить</button>
+                </form>
+            </div>
+        </div>
+    {% else %}
+        <p class="text-muted">
+            <a href="{% url 'accounts:login' %}?next={{ request.path }}">Войдите</a>, чтобы оставить ответ.
+        </p>
+    {% endif %}
+
+    <h5>Ответы</h5>
+    {% if responses %}
+        <div class="list-group mb-4">
+            {% for response in responses %}
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <a href="#" class="me-3">
+                            <img src="{{ response.author.avatar.url }}" alt="{{ response.author.username }}"
+                                 width="48" height="48" class="rounded-circle" style="object-fit: cover;">
+                        </a>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a href="#" class="fw-bold text-decoration-none">
+                                        {{ response.author.username }}
+                                    </a>
+                                    <span class="badge bg-secondary">сообщений: {{ response.author_msg_count }}</span>
+                                    <small class="text-muted ms-2">{{ response.created_at|date:"d.m.Y H:i" }}</small>
+                                </div>
+                                {% if user == response.author or user.is_moderator %}
+                                    <div>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Изменить</a>
+                                        <a href="#" class="btn btn-sm btn-outline-danger">Удалить</a>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <p class="mb-0 mt-1" style="white-space: pre-wrap;">{{ response.message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-muted">Ответов пока нет. Будьте первым!</p>
+    {% endif %}
+
+    {% include 'partial/pagination.html' %}
+{% endblock %}
