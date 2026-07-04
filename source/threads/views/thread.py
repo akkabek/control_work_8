@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, CreateView, DetailView
+from django.views.generic.edit import FormMixin
 
 from threads.forms import SimpleSearchForm, ThreadForm, ResponseForm
 from threads.models.thread import Thread
@@ -70,7 +71,7 @@ class ThreadCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class ThreadDetailView(LoginRequiredMixin, DetailView):
+class ThreadDetailView(FormMixin, DetailView):
     model = Thread
     template_name = "threads/thread_detail.html"
     context_object_name = "thread"
