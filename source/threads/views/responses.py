@@ -9,7 +9,7 @@ from threads.models.response import Response
 class ResponseUpdateView(AuthorOrModeratorRequiredMixin, UpdateView):
     model = Response
     form_class = ResponseForm
-    template_name = "threads/response_form.html"
+    template_name = "responses/response_form.html"
     context_object_name = "response"
 
     def get_success_url(self):
@@ -17,7 +17,7 @@ class ResponseUpdateView(AuthorOrModeratorRequiredMixin, UpdateView):
 
 class ResponseDeleteView(AuthorOrModeratorRequiredMixin, DeleteView):
     model = Response
-    template_name = "threads/response_confirm_delete.html"
+    template_name = "responses/response_confirm_delete.html"
     context_object_name = "response"
 
     def get_success_url(self):
