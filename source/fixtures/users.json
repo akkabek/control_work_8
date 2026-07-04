@@ -1,0 +1,97 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$NhhZn3BJrGG80JjPQkcHrE$H9WAjA5hXejlPyH51co1GXsEi8zhC2+vequh8r0WyHM=",
+    "last_login": "2026-07-04T12:39:51.428Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "user",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-07-04T09:03:51.210Z",
+    "avatar": "avatars/user/Mushu-PNG-Image-Background.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$7jPghbM1kgDnszJYv5QBpL$zELgdGgJBL/eombY9OObWTkwdhqrt2ts8QpV5YNgZzM=",
+    "last_login": "2026-07-04T12:41:07.330Z",
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "user1",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-07-04T09:12:19.348Z",
+    "avatar": "avatars/user1/Mushu-PNG-Image-Background.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$hpqOkyqV6NX9qYrRoXWmcx$r5E8m/+yLdtToXzvnhWSn4L/tkU5oavCQkJ7RPOXLSY=",
+    "last_login": "2026-07-04T09:12:58.547Z",
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "user2",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-07-04T09:12:58.426Z",
+    "avatar": "avatars/user2/Mushu-PNG-Image-Background.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$ksKytwa0Dm50d2V9Cu4Aax$RT+8NIk7V1BhPTvQJRmqCMljEwOwGu8EJd/H3ONDroY=",
+    "last_login": "2026-07-04T12:36:02.043Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-07-04T12:25:36.123Z",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$dhLN6VGwa8GwtuHvUHUnMC$V+i8Z/lnQTTexkt5Qdq8xRyAp2dhffJS98X6BmW9jFo=",
+    "last_login": "2026-07-04T12:39:03.975Z",
+    "is_superuser": false,
+    "username": "moder",
+    "first_name": "moder",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-07-04T12:39:03.832Z",
+    "avatar": "avatars/moder/Mushu-PNG-Image-Background.png",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

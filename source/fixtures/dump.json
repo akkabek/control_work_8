@@ -1,0 +1,252 @@
+[
+{
+  "model": "threads.thread",
+  "pk": 1,
+  "fields": {
+    "title": "ret",
+    "content": "ret",
+    "created_at": "2026-07-04T11:17:56.126Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 2,
+  "fields": {
+    "title": "тема 2",
+    "content": "тема 2",
+    "created_at": "2026-07-04T12:40:00.623Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 3,
+  "fields": {
+    "title": "тема 3",
+    "content": "тема 3",
+    "created_at": "2026-07-04T12:40:08.725Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 4,
+  "fields": {
+    "title": "тема 4",
+    "content": "тема 4",
+    "created_at": "2026-07-04T12:40:21.073Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 5,
+  "fields": {
+    "title": "тема 42",
+    "content": "тема 42",
+    "created_at": "2026-07-04T12:40:32.627Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 6,
+  "fields": {
+    "title": "тема 43",
+    "content": "тема 43",
+    "created_at": "2026-07-04T12:40:38.772Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 7,
+  "fields": {
+    "title": "тема 432",
+    "content": "тема 43а",
+    "created_at": "2026-07-04T12:40:44.997Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 8,
+  "fields": {
+    "title": "тема 4234а",
+    "content": "4мтема 4",
+    "created_at": "2026-07-04T12:40:50.997Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 9,
+  "fields": {
+    "title": "тема 4кпа",
+    "content": "тема 4ука",
+    "created_at": "2026-07-04T12:40:57.881Z",
+    "author": 1
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 10,
+  "fields": {
+    "title": "ewfef",
+    "content": "wefwf",
+    "created_at": "2026-07-04T12:41:16.409Z",
+    "author": 2
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 11,
+  "fields": {
+    "title": "wefwef",
+    "content": "efwef",
+    "created_at": "2026-07-04T12:41:20.771Z",
+    "author": 2
+  }
+},
+{
+  "model": "threads.thread",
+  "pk": 12,
+  "fields": {
+    "title": "wefwf",
+    "content": "wefwef",
+    "created_at": "2026-07-04T12:41:25.538Z",
+    "author": 2
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 2,
+  "fields": {
+    "message": "hey hey",
+    "created_at": "2026-07-04T12:00:45.232Z",
+    "author": 2,
+    "thread": 1
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 3,
+  "fields": {
+    "message": "wefwef",
+    "created_at": "2026-07-04T12:41:36.512Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 4,
+  "fields": {
+    "message": "",
+    "created_at": "2026-07-04T12:41:38.867Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 5,
+  "fields": {
+    "message": "wefwefff",
+    "created_at": "2026-07-04T12:41:41.961Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 6,
+  "fields": {
+    "message": "wefwef",
+    "created_at": "2026-07-04T12:41:43.461Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 7,
+  "fields": {
+    "message": "wefwefrgrg",
+    "created_at": "2026-07-04T12:41:45.586Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 8,
+  "fields": {
+    "message": "wergerg",
+    "created_at": "2026-07-04T12:41:49.097Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 9,
+  "fields": {
+    "message": "ergergerg",
+    "created_at": "2026-07-04T12:41:54.890Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 10,
+  "fields": {
+    "message": "ergqerggrg",
+    "created_at": "2026-07-04T12:41:58.093Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 11,
+  "fields": {
+    "message": "qergergerg",
+    "created_at": "2026-07-04T12:42:01.947Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 12,
+  "fields": {
+    "message": "regqergeg",
+    "created_at": "2026-07-04T12:42:05.555Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 13,
+  "fields": {
+    "message": "erret",
+    "created_at": "2026-07-04T12:42:08.931Z",
+    "author": 2,
+    "thread": 12
+  }
+},
+{
+  "model": "threads.response",
+  "pk": 14,
+  "fields": {
+    "message": "efbrrgrg",
+    "created_at": "2026-07-04T12:42:12.428Z",
+    "author": 2,
+    "thread": 12
+  }
+}
+]
