@@ -22,7 +22,7 @@
             <tbody>
                 {% for thread in threads %}
                     <tr class="thread-row" style="cursor:pointer"
-                        onclick="window.location='#'">
+                        onclick="window.location='{% url 'threads:thread_detail' pk=thread.pk %}'">
                         <td>
                             <a class="text-decoration-none"
                                href="#">{{ thread.title }}</a>
