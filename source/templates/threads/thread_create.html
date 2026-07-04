@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+    {% include 'partial/form.html' with form_title=form_title btn_txt=btn_txt extra_classes="w-50 mx-auto" %}
+{% endblock %}
