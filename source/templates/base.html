@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Форум{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="% url 'threads:thread_list' %}">Forum</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'threads:thread_list' %}">
+                        Главная
+                    </a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'threads:thread_create' %}">
+                        Создать тему
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+
+            <form class="d-flex me-3" method="get" action="{% url 'threads:thread_list' %}">
+                <input class="form-control me-2" type="search" name="search" placeholder="Поиск"
+                       value="{{ search_value|default:'' }}">
+                <button class="btn btn-outline-light">Найти</button>
+            </form>
+
+            <ul class="navbar-nav">
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <span class="navbar-text me-3">
+                            {{ user.first_name }}
+                        </span>
+                    </li>
+                    <form action="{% url 'accounts:logout' %}" class="btn btn-light" method="POST">
+                        {% csrf_token %}
+                        <button class="border-0">Выйти</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'accounts:login' %}" class="btn btn-light">Войти</a>
+                    <a class="btn btn-light" href="{% url 'accounts:register' %}?next={{ request.get_full_path }}">Регистрация</a>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
