@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Темы — Forum{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Темы</h2>
+
+    {% if search_value %}
+        <p class="text-muted">Результаты поиска по запросу «{{ search_value }}»</p>
+    {% endif %}
+
+    {% if threads %}
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>Название темы</th>
+                    <th>Дата создания</th>
+                    <th>Автор</th>
+                    <th>Ответов</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for thread in threads %}
+                    <tr class="thread-row" style="cursor:pointer"
+                        onclick="window.location='#'">
+                        <td>
+                            <a class="text-decoration-none"
+                               href="#">{{ thread.title }}</a>
+                        </td>
+                        <td>{{ thread.created_at|date:"d.m.Y" }}</td>
+                        <td>
+                            <a class="text-decoration-none"
+                               href="#"
+                               onclick="event.stopPropagation()">{{ thread.author.username }}</a>
+                        </td>
+                        <td>ответов {{ thread.response_count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="text-muted">Тем пока нет{% if search_value %} по вашему запросу{% endif %}.</p>
+    {% endif %}
+
+    {% include 'partial/pagination.html' %}
+{% endblock %}
