@@ -4,7 +4,7 @@ from threads.models.thread import Thread
 
 
 class Response(models.Model):
-    description = models.TextField(null=True, blank=True, max_length=500, verbose_name='Текст ответа')
+    message = models.TextField(null=True, blank=True, max_length=500, verbose_name='Текст ответа')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     author = models.ForeignKey(
         get_user_model(),
