@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="card my-5 w-50 mx-auto">
+        <div class="card-header fs-4 text-center py-3">Удаление ответа</div>
+        <div class="card-body">
+            <p>Вы уверены, что хотите удалить этот ответ?</p>
+            <blockquote class="blockquote-footer">{{ object.message }}</blockquote>
+        </div>
+        <div class="card-footer text-end py-3">
+            <a href="{% url 'threads:thread_detail' pk=object.thread_id %}" class="btn btn-sm btn-secondary">Отмена</a>
+            <form action="" method="POST" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-sm btn-danger">Удалить</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
