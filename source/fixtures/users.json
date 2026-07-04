@@ -89,6 +89,7 @@
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-07-04T12:39:03.832Z",
+    "is_moderator": true,
     "avatar": "avatars/moder/Mushu-PNG-Image-Background.png",
     "groups": [],
     "user_permissions": []
